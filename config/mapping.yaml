@@ -1,0 +1,37 @@
+lio_yaml: ../config/velodyne_nclt.yaml
+common:
+  imu_topic: imu_raw
+  dataset: nclt
+  lid_topic: points_raw
+  time_sync_en: false
+rtk_ang_noise: 5.0
+loop_closing:
+  min_distance: 30
+  skip_id: 5
+  ndt_score_th: 4.5
+  min_id_interval: 100
+rtk_ext:
+  t: [0, 0.24, -0.283]
+rtk_has_rot: false
+lidar_continuous_num: 5
+bag_path: /home/lyl/disk/sad/nclt/20130110.bag
+rtk_height_noise_ratio: 10.0
+map_data: ../data/ch9/map_data/
+imu_has_gravity: true
+YAML: 1.0
+rtk_pos_noise: 2.0
+point_filter_num: 3
+max_iteration: 10
+preprocess:
+  time_scale: 1e-3
+  scan_line: 32
+  lidar_type: 2
+origin:
+  - 276726.5626579862
+  - 4685961.4821172
+  - 272.809
+rtk_outlier_th: 1.0
+mapping:
+  extrinsic_est_en: true
+  extrinsic_T: [0, 0, 0.28]
+  extrinsic_R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
